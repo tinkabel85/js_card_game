@@ -90,8 +90,8 @@ body {
   font-size: calc(20px + 12 * (100vw / 1440));
   line-height: 39px;
   letter-spacing: -0.02em;
-  color: #FFF;
-  background: #D62B2E;
+  color: #fff;
+  background: #d62b2e;
   border-radius: 4px;
   padding: 23px 82px;
   cursor: pointer;
@@ -309,7 +309,7 @@ body {
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .title {
     padding-top: 350px;
     font-size: calc(24px + (33 + 33 * 0.7) * ((100vw - 320px) / 1440));

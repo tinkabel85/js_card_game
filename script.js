@@ -1,7 +1,7 @@
 const btn = document.getElementById('button');
 const level = document.getElementById('level');
 const wrapperGame = document.querySelector('.wrap-game');
-const main = document.querySelector('.wrapper')
+//const main = document.querySelector('.wrapper');
 
 let levels = document.querySelectorAll('.level__game');
 
@@ -73,4 +73,4 @@ function startGame() {
   wrapperGame.style.display = 'flex';
 }
 
-button.addEventListener('click', startGame);
+btn.addEventListener('click', startGame);
