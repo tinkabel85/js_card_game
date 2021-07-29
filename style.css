@@ -1,0 +1,395 @@
+body {
+  font-family: 'robotoregular', 'robotomedium', 'robotobold', sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: no-repeat url(./img/main.png);
+  background-size: cover;
+}
+
+.wrapper {
+  margin: 0;
+  width: auto;
+  height: 100vh;
+  padding: 0 0 0 103px;
+}
+
+.wrap-game {
+  display: none;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100vh;
+  padding-left: 20px;
+}
+
+.middle {
+  width: 65%;
+}
+
+.hard {
+  width: 90%;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  font-size: calc(24px + 33 * (100vw / 1440));
+  line-height: 67px;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-top: 127px;
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: bold;
+  font-size: calc(13px + 6 * (100vw / 1440));
+  line-height: 22px;
+  letter-spacing: 0.08px;
+  padding-left: 3px;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.level {
+  padding-left: 49px;
+  margin-bottom: 143px;
+}
+
+.level__game {
+  position: relative;
+  font-weight: bold;
+  font-size: calc(23px + 27 * (100vw / 1440));
+  line-height: 55px;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 29px 0;
+  cursor: pointer;
+}
+
+.active::after {
+  width: 18px;
+  height: 18px;
+  content: '';
+  position: absolute;
+  left: -45px;
+  top: calc(50% - 8px);
+  background: #d62b2e;
+  transform: rotate(45deg);
+}
+
+/* .active {
+  color: #d62b2e;
+} */
+
+.button {
+  border: 2px solid red;
+  width: 352px;
+  height: 95px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: calc(20px + 12 * (100vw / 1440));
+  line-height: 39px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  background: #d62b2e;
+  border-radius: 4px;
+  padding: 23px 82px;
+  cursor: pointer;
+}
+
+.card1 {
+  background: no-repeat url('img/card.svg');
+  background-size: contain;
+  width: 218px;
+  height: 341px;
+  position: absolute;
+  left: 61.6%;
+  top: 51.8vh;
+  transform: rotate(12deg);
+}
+
+.card2 {
+  background: no-repeat url('img/card.svg');
+  background-size: contain;
+  width: 218px;
+  height: 341px;
+  position: absolute;
+  left: 74.3%;
+  top: 53.5vh;
+  transform: rotate(39.2deg);
+}
+
+.flip-card {
+  width: 218px;
+  height: 341px;
+  perspective: 1000px;
+  margin: 1px 24px 0 0;
+}
+
+.flip-card:hover {
+  box-shadow: 10px 10px 15px #000;
+  transform: translateY(-30px) rotateZ(-2deg);
+}
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card__front {
+  position: absolute;
+  background: no-repeat url('img/card.svg');
+  background-size: cover;
+}
+
+.flip-card__back {
+  position: absolute;
+  background: no-repeat url('img/gameOver.svg');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+.flip-card__back-bug {
+  position: absolute;
+  background: no-repeat url('img/bug.svg');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1550px) {
+  .wrapper {
+    padding: 0 0 0 150px;
+  }
+
+  .card1 {
+    height: 375.1px;
+    width: 239.8px;
+    left: 53.67%;
+    top: 40.8%;
+  }
+
+  .card2 {
+    height: 375.1px;
+    width: 239.8px;
+    left: 66.3%;
+    top: 39.3%;
+  }
+
+  .hard {
+    width: 85%;
+  }
+
+  .middle {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hard {
+    width: 100%;
+  }
+
+  .middle {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+  .card1 {
+    left: 53.67%;
+    top: 40.8%;
+  }
+
+  .card2 {
+    left: 66.3%;
+    top: 39.3%;
+  }
+
+  .middle {
+    width: 90%;
+  }
+
+  .hard {
+    width: 98%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 0 0 70px;
+  }
+
+  .level {
+    margin-bottom: 100px;
+  }
+
+  .card1 {
+    height: 272.8px;
+    width: 174px;
+    left: 53.67%;
+    top: 40.8%;
+  }
+
+  .card2 {
+    height: 272.8px;
+    width: 174px;
+    left: 66.3%;
+    top: 39.3%;
+  }
+
+  .flip-card {
+    height: 272.8px;
+    width: 174px;
+  }
+
+  .middle {
+    width: 75%;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .title {
+    padding-top: 332px;
+  }
+
+  .subtitle {
+    padding: 0 10%;
+  }
+
+  .level {
+    padding-left: 0;
+  }
+
+  .active::after {
+    display: none;
+  }
+
+  .active {
+    color: #d62b2e;
+  }
+
+  .level__game:hover {
+    content: '';
+    color: #d62b2e;
+  }
+
+  .card1 {
+    left: 30.8%;
+    top: 3%;
+    height: 238.7px;
+    width: 152.6px;
+  }
+
+  .card2 {
+    left: 50.3%;
+    top: 4%;
+    height: 238.7px;
+    width: 152.6px;
+  }
+
+  .middle {
+    width: 95%;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    padding-top: 350px;
+    font-size: calc(24px + (33 + 33 * 0.7) * ((100vw - 320px) / 1440));
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    font-size: calc(13px + (6 + 6 * 0.7) * ((100vw - 320px) / 1440));
+    margin-bottom: 50px;
+  }
+
+  .level__game {
+    font-size: calc(23px + (27 + 27 * 0.7) * ((100vw - 320px) / 1440));
+    line-height: 30px;
+  }
+
+  .level {
+    margin-bottom: 70px;
+  }
+
+  .button {
+    padding: 15px 70px;
+  }
+
+  .flip-card {
+    height: 204.6px;
+    width: 130.8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    padding: 0;
+  }
+
+  .title {
+    padding-top: 210px;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+  }
+
+  .level__game {
+    margin-bottom: 15px;
+  }
+
+  .button {
+    padding: 10px 50px;
+  }
+
+  .card1 {
+    height: 170.5px;
+    width: 109px;
+    left: 17%;
+    top: 3%;
+  }
+
+  .card2 {
+    height: 170.5px;
+    width: 109px;
+    left: 44%;
+    top: 4%;
+  }
+
+  .flip-card {
+    height: 204.6px;
+    width: 130.8px;
+  }
+
+  .middle {
+    width: 98%;
+  }
+}
