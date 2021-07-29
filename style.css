@@ -81,6 +81,10 @@ body {
   transform: rotate(45deg);
 }
 
+/* .active {
+  color: #d62b2e;
+} */
+
 .button {
   border: 2px solid red;
   width: 352px;
@@ -283,6 +287,10 @@ body {
 
   .active::after {
     display: none;
+  }
+
+  .active {
+    color: #d62b2e;
   }
 
   .level__game:hover {

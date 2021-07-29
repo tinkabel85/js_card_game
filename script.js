@@ -1,7 +1,6 @@
 const btn = document.getElementById('button');
 const level = document.getElementById('level');
 const wrapperGame = document.querySelector('.wrap-game');
-//const main = document.querySelector('.wrapper');
 
 let levels = document.querySelectorAll('.level__game');
 
@@ -10,7 +9,7 @@ levels.forEach(level => {
     levels.forEach(lvl => lvl.classList.remove('active'));
     level.classList.add('active');
   })
-})
+});
 
 function deleteCards() {
   document.querySelector('.wrapper').style.display = 'block';
