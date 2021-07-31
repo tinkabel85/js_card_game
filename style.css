@@ -45,7 +45,7 @@ body {
 
 .subtitle {
   margin: 0;
-  font-weight: bold;
+  font-weight: 400;
   font-size: calc(13px + 6 * (100vw / 1440));
   line-height: 22px;
   letter-spacing: 0.08px;
@@ -62,7 +62,7 @@ body {
 .level__game {
   position: relative;
   font-weight: bold;
-  font-size: calc(23px + 27 * (100vw / 1440));
+  font-size: calc(20px + 30 * (100vw / 1440));
   line-height: 55px;
   letter-spacing: -0.03em;
   color: #fff;
@@ -81,10 +81,6 @@ body {
   transform: rotate(45deg);
 }
 
-/* .active {
-  color: #d62b2e;
-} */
-
 .button {
   border: 2px solid red;
   width: 352px;
@@ -96,7 +92,8 @@ body {
   letter-spacing: -0.02em;
   color: #fff;
   background: #d62b2e;
-  border-radius: 4px;
+  border-radius: 7px;
+  box-shadow: 2px 4px 6px #524646;
   padding: 23px 82px;
   cursor: pointer;
 }
@@ -124,23 +121,21 @@ body {
 }
 
 .flip-card {
+  position: relative;
+  background-color: transparent;
   width: 218px;
   height: 341px;
   perspective: 1000px;
   margin: 1px 24px 0 0;
 }
 
-.flip-card:hover {
-  box-shadow: 10px 10px 15px #000;
-  transform: translateY(-30px) rotateZ(-2deg);
-}
-
 .flip-card__inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.3s;
+  transition: transform .5s;
   transform-style: preserve-3d;
+  border-radius: 10px;
 }
 
 .rotate {
@@ -153,18 +148,20 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 10px;
 }
 
 .flip-card__front {
-  position: absolute;
   background: no-repeat url('img/card.svg');
-  background-size: cover;
+}
+
+.flip-card__front:hover {
+  box-shadow: 10px 10px 15px #000;
+  transform: translateY(-30px) rotateZ(-2deg);
 }
 
 .flip-card__back {
-  position: absolute;
   background: no-repeat url('img/gameOver.svg');
-  background-size: cover;
   transform: rotateY(180deg);
 }
 
@@ -231,6 +228,16 @@ body {
   .hard {
     width: 98%;
   }
+
+  .flip-card {
+    height: 272.8px;
+    width: 174px;
+  }
+
+  .flip-card__front,
+  .flip-card__back {
+    background-size: cover;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -261,6 +268,11 @@ body {
     width: 174px;
   }
 
+  .flip-card__front,
+  .flip-card__back {
+    background-size: cover;
+  }
+
   .middle {
     width: 75%;
   }
@@ -274,15 +286,22 @@ body {
   }
 
   .title {
-    padding-top: 332px;
+    padding-top: 300px;
   }
 
   .subtitle {
     padding: 0 10%;
+    margin-bottom: 30px;
   }
 
   .level {
     padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .level__game {
+    margin-bottom: 20px;
+    line-height: 40px;
   }
 
   .active::after {
@@ -312,14 +331,23 @@ body {
     width: 152.6px;
   }
 
+  .button {
+    padding: 15px 60px;
+  }
+
+  .flip-card {
+    height: 228.7px;
+    width: 152px;
+  }
+
   .middle {
     width: 95%;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .title {
-    padding-top: 350px;
+    /* padding-top: 300px; */
     font-size: calc(24px + (33 + 33 * 0.7) * ((100vw - 320px) / 1440));
     line-height: 35px;
     margin-bottom: 30px;
@@ -327,25 +355,30 @@ body {
 
   .subtitle {
     font-size: calc(13px + (6 + 6 * 0.7) * ((100vw - 320px) / 1440));
-    margin-bottom: 50px;
+    margin-bottom: 5%;
   }
 
   .level__game {
-    font-size: calc(23px + (27 + 27 * 0.7) * ((100vw - 320px) / 1440));
-    line-height: 30px;
+    font-size: calc(20px + (30 + 30 * 0.7) * ((100vw - 320px) / 1440));
+    line-height: 23px;
   }
 
   .level {
-    margin-bottom: 70px;
+    margin-bottom: 8%;
   }
 
   .button {
     padding: 15px 70px;
   }
 
+  .wrap-game {
+    padding-left: 8px;
+  }
+
   .flip-card {
-    height: 204.6px;
-    width: 130.8px;
+    height: 180.73px;
+    width: 115.54px;
+    margin: 1px 10px 0 0;
   }
 }
 
@@ -356,18 +389,19 @@ body {
 
   .title {
     padding-top: 210px;
+    margin-bottom: 10px;
   }
 
   .subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .level__game {
-    margin-bottom: 15px;
+    margin-bottom: 3%;
   }
 
   .button {
-    padding: 10px 50px;
+    padding: 8px 40px;
   }
 
   .card1 {
@@ -385,8 +419,8 @@ body {
   }
 
   .flip-card {
-    height: 204.6px;
-    width: 130.8px;
+    height: 136.4px;
+    width: 87.2px;
   }
 
   .middle {

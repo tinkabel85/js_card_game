@@ -18,7 +18,7 @@ function deleteCards() {
   wrapperGame.className = 'wrap-game';
 }
 
-function renderCard(number) {
+function renderCard(number, bug) {
   for (let i = 0; i < number; i++) {
     let card = document.createElement('div');
     let cardInner = document.createElement('div');
@@ -38,9 +38,8 @@ function renderCard(number) {
     cardInner.appendChild(cardBack);
 
     let rotate = () => {
-      let number = Math.round(Math.random());
       cardInner.classList.toggle('rotate');
-      if (number === 1) cardBack.classList.add('flip-card__back-bug');
+      if (i === bug - 1) cardBack.classList.add('flip-card__back-bug');
       let cards = document.querySelectorAll('.flip-card');
       cards.forEach(card => card.addEventListener('click', deleteCards));
     }
@@ -48,18 +47,23 @@ function renderCard(number) {
   }
 }
 
+function getRandom(min, max) {
+  let rand = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(rand);
+}
+
 function chooseLevel(level) {
   switch (level) {
     case 'Простой':
-      renderCard(3);
+      renderCard(3, getRandom(1, 3));
       wrapperGame.classList.add('simple');
       break;
     case 'Средний':
-      renderCard(6);
+      renderCard(6, getRandom(1, 6));
       wrapperGame.classList.add('middle');
       break;
     case 'Сложный':
-      renderCard(10);
+      renderCard(10, getRandom(1, 10));
       wrapperGame.classList.add('hard');
       break;
   }
