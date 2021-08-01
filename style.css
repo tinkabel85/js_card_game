@@ -21,7 +21,6 @@ body {
   flex-wrap: wrap;
   align-content: center;
   height: 100vh;
-  padding-left: 20px;
 }
 
 .middle {
@@ -126,7 +125,7 @@ body {
   width: 218px;
   height: 341px;
   perspective: 1000px;
-  margin: 1px 24px 0 0;
+  margin: 10px;
 }
 
 .flip-card__inner {
@@ -201,10 +200,6 @@ body {
 }
 
 @media (max-width: 1440px) {
-  .hard {
-    width: 100%;
-  }
-
   .middle {
     width: 65%;
   }
@@ -266,6 +261,7 @@ body {
   .flip-card {
     height: 272.8px;
     width: 174px;
+    margin: 10px;
   }
 
   .flip-card__front,
@@ -300,7 +296,7 @@ body {
   }
 
   .level__game {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     line-height: 40px;
   }
 
@@ -347,10 +343,10 @@ body {
 
 @media (max-width: 768px) {
   .title {
-    /* padding-top: 300px; */
+    padding: 350px 5% 0;
     font-size: calc(24px + (33 + 33 * 0.7) * ((100vw - 320px) / 1440));
     line-height: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .subtitle {
@@ -371,14 +367,62 @@ body {
     padding: 15px 70px;
   }
 
-  .wrap-game {
-    padding-left: 8px;
+  .card1 {
+    left: 30.3%;
+    top: 5%;
+    height: 238.7px;
+    width: 152.6px;
+  }
+
+  .card2 {
+    left: 50.3%;
+    top: 7%;
+    height: 238.7px;
+    width: 152.6px;
   }
 
   .flip-card {
     height: 180.73px;
     width: 115.54px;
-    margin: 1px 10px 0 0;
+    margin: 5px 5px 0 5px;
+  }
+}
+
+@media (max-width: 540px) {
+  .flip-card {
+    height: 170.5px;
+    width: 109px;
+    margin: 3px 5px 0 5px;
+  }
+
+  .level__game {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    padding: 300px 5% 0;
+  }
+
+  .card1 {
+    left: 26%;
+    top: 5%;
+    height: 204.6px;
+    width: 130.8px;
+  }
+
+  .card2 {
+    left: 51.3%;
+    top: 7%;
+    height: 204.6px;
+    width: 130.8px;
+  }
+
+  .flip-card {
+    height: 136.4px;
+    width: 87.2px;
+    margin: 3px 5px 0 5px;
   }
 }
 
@@ -407,23 +451,32 @@ body {
   .card1 {
     height: 170.5px;
     width: 109px;
-    left: 17%;
+    left: 25%;
     top: 3%;
   }
 
   .card2 {
     height: 170.5px;
     width: 109px;
-    left: 44%;
+    left: 48%;
     top: 4%;
   }
 
   .flip-card {
     height: 136.4px;
     width: 87.2px;
+    margin: 3px 5px 0 5px;
   }
 
   .middle {
     width: 98%;
+  }
+}
+
+@media (max-width: 320px) {
+  .flip-card {
+    height: 102.34px;
+    width: 65.4px;
+    margin: 3px 5px 0 5px;
   }
 }
