@@ -147,6 +147,7 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 10px;
 }
 
@@ -155,8 +156,11 @@ body {
 }
 
 .flip-card__front:hover {
-  box-shadow: 10px 10px 15px #000;
+  will-change: transform;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
   transform: translateY(-30px) rotateZ(-2deg);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 .flip-card__back {
@@ -332,8 +336,8 @@ body {
   }
 
   .flip-card {
-    height: 228.7px;
-    width: 152px;
+    height: 238.7px;
+    width: 152.6px;
   }
 
   .middle {
